@@ -1,7 +1,11 @@
 var me = {
 FirstName: "Vasilios",
 LastName: "Kambouras",
-Age: 21
+Age: 21,
+getFullName : function() {
+    return this.fname + ' ' + this.lname;
+}
+};}
 
 };
 
