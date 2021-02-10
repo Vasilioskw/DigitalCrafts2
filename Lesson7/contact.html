@@ -33,7 +33,6 @@ function submit_Form(){
     var first_name_container = = document.getElementById(first_name_container);
     first_name_container.innerHTML = first_name_container
 
-
     
     var last_name = document.getElementById('last_name');
     console.log(first_name.value);
@@ -73,7 +72,36 @@ function submit_Form(){
 
     var first_name_container = = document.getElementById(first_name_container);
     first_name_container.innerHTML = first_name_container
+
+    var radios = document.getElementById('contact_reason')
+    console.log(radios)
+
+    for(var i=0; i<radios.length; i++) {
+
+        if(radios[i].checked) {
+            var selected_radio = radios[i].value;
+
+            break
+        }
+    }
 }
+
+
+function clearForm() {
+var items = document.getElementsByClassName('input-item');
+console.log(items);
+
+for(var i=0; i<items.length; i++);
+items[i].value = '';
+
+    // More efficient way^
+//     var first_name = document.getElementById('first_name');
+//     first_name.value = '';
+
+//     var message = document.getElementById('message');
+// message.value = '';
+}
+
 </script>
 
     </head>
