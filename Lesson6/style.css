@@ -1,0 +1,39 @@
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+    color: blue; 
+    text-align: center
+}
+
+
+body {
+    background-color: aquamarine
+}
+
+.center_box {
+
+    text-align: center;
+    border-width: 4px;
+}
+
+
+li {
+    color: red
+}
+.make-red {
+color: red
+}
+
+.font-size-1 {
+font-size: 20px;
+}
