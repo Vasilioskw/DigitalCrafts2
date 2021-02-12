@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body id="main">
+    </body>
+    <script>
+        var body = document.getElementById('main');
+        console.log(body);
+        var title = document.createElement('h1');
+        title.innerHTML = 'My Timeout';
+        body.appendChild(title);
+        //<label></label>
+        var label = document.createElement('label');
+        label.innerHTML = 'Enter Timeount Number Here';
+        label.style.display = 'block';
+        body.appendChild(label);
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.style.display = 'block';
+        body.appendChild(input);
+        //<button></button>
+        var button = document.createElement('button');
+        button.innerHTML = 'Click Me';
+        body.appendChild(button);
+        button.addEventListener("click", function(){
+            var myCallback = function(){ 
+                alert("Hello"); 
+            };
+            setTimeout(myCallback, input.value);
+        });
+    </script>
+</html>
