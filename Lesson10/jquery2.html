@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <title>Button Click</title>
+</head>
+<body>
+
+
+<script>   
+ $(document).ready(() => {
+    console.log('jQuery is ready to go!');
+});
+
+
+function bottonClick() { 
+const $button = $('<button>', {
+    text: 'Click me!'
+})
+$(document.body).append($button)
+console.log("button made")
+}
+$(bottonClick())
+
+function bottonClicked() { 
+    $(button).on('click',function () {
+  $.alert('Message here', {
+})
+})
+console.log("I heard you!")
+
+};
+
+
+</script>
+
+
+</body>
+</html>
