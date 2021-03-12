@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <style>
+        .board-slot {
+            width: 200px;
+            height: 200px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;;
+        }
+    </style>
+</head>
+
+    <style>
+        .board-slot {
+            width: 200px;
+            height: 200px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;;
+        }
+    </style>
+</head>
+<body>
+    <div id="board"></div>
+</body>
+<script>
+    var boardElement = document.getElementById('board');
+    var board = [];
+    for (var row = 0; row < 3; row++) {
+        if (board[row] == undefined) {
+            board[row] = []
+        }
+        for (var col = 0; col < 3; col++) {
+            var slot = document.createElement("div");
+            slot.className = "board-slot";
+            slot.addEventListener("click", function () {
+                alert("You Click Me!");
+            });
+            board[row][col] = slot;
+            boardElement.appendChild(slot);
+        }//end of j
+    }//end of i
+    console.log(board);
+    board[1][1].innerHtml = 'X'
+
+</script>
+
+    <script src="tictactoe01.js"></script>
+</body>
+</html>
