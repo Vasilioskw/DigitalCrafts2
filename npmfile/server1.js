@@ -1,20 +1,14 @@
 const http = require('http');
-const { Server } = require('node:http');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
-// Request Handler
-const sever = http.createServer((req, res) => {
-console.log(req);
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello World')
+});
 
-
-//implicit header method
-res.statusCode = 200;
-res.setHeader('content-Type', 'text/plain');
-res.end('Hello World')
-})
-
-Server.listener(port, hostname, () => 
-console.log('Server is listening on http://${hostname}:${port}');
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
 });
