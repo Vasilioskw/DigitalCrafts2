@@ -7,12 +7,19 @@ const port = 3000;
 const express = require('express');
 const app = express();
 
+const es6Renderer = require('express-es6-template-engine');
+app.engine('html', es6Renderer)
+app.set('views', 'templates')
+app.set('view engine', 'html');
+
+
 const server = http.createServer(app);
 const db = require('./db');
 
 
 app.get('/',(req, res) => {
-res.send("hello express")
+// res.send("hello express")
+res.render('home');
 });
 
 app.get('/friends', (req, res) => {
@@ -40,7 +47,8 @@ app.get('/friends/:name', (req, res) => {
   
     res.send(htmlData);
 
-//     } else {
+    // } 
+// else {
 // res.status(404)
 //         .send("No friend with that name found")
 //         }
